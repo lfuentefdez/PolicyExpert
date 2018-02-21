@@ -11,5 +11,8 @@ public class Product {
 	public String getName() {
 		return this.name;
 	}
-
+	
+	public void as() {
+		
+	}
 }
