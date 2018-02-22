@@ -1,18 +1,31 @@
 
 public class Product {
 	private String name;
-	private double price;
+	private Price price;
 	
-	public Product(String name, double price) {
+	public Product(String name, Price price) {
 		this.name = name;
 		this.price = price;
 	}
 	
-	public String getName() {
+	public final String getName() {
 		return this.name;
 	}
 	
-	public void as() {
-		
+	public double calculatePrice(double amount) {
+		return price.calculatePrice(amount);
+	}
+	
+	public void updateProductPrice(double newPrice) {
+		price.updatePrice(newPrice);
+	}
+	
+	public String displayPrice() {
+		return price.toString();
+	}
+	
+	@Override
+	public String toString() {
+		return name;
 	}
 }
